@@ -2,10 +2,6 @@ import { getFormattedDate } from '@lib/utils';
 import { getPosts } from '@lib/firebase';
 import { Layout } from '@components';
 
-// This component represents the index page for the site. You
-// can read more about Pages in the Next.js docs at:
-// https://nextjs.org/docs/basic-features/pages
-
 const HomePage = ({ posts }) => (
   <Layout>
     <div>
@@ -27,11 +23,6 @@ const HomePage = ({ posts }) => (
     </div>
   </Layout>
 );
-
-// This is for fetching data every time the page is visited. We do this
-// so that we don't have to redploy the site every time we add a blog post.
-// You can read more about this in the Next.js docs at:
-// https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
 
 export async function getServerSideProps() {
   const posts = await getPosts();
