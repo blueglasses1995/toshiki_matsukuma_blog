@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
-      "@components/*": ["components/*"],
+      "@components": ["components"],
       "@contexts/*": ["contexts/*"],
       "@lib/*": ["lib/*"],
       "@styles/*": ["styles/*"]
