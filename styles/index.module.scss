@@ -1,41 +1,40 @@
 // These styles go with the index page.
 
 .HomePage {
-    h1 {
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  article {
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:not(:last-child) {
       margin-bottom: 32px;
     }
-  
-    article {
-      border: 1px solid black;
-      border-radius: 12px;
-      overflow: hidden;
-  
-      &:not(:last-child) {
-        margin-bottom: 32px;
-      }
-  
-      div {
-        padding: 16px;
-  
-        h2 {
-          margin-top: 0;
-          margin-bottom: 4px;
-        }
-  
-        span {
-          display: block;
-          margin-bottom: 12px;
-        }
-  
-        p {
-          margin: 0;
-          margin-bottom: 16px;
-        }
 
-        a {
-          color: #1a73e8;
-        }
+    div {
+      padding: 16px;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 16px;
+      }
+
+      a {
+        color: #1a73e8;
       }
     }
   }
-  
+}
