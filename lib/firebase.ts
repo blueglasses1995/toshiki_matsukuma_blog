@@ -19,7 +19,7 @@ const reshape = snapshot => {
   const snapshotVal = snapshot.val();
   if (!snapshotVal) return;
   const result = [];
-  for (var slug in snapshotVal) {
+  for (const slug in snapshotVal) {
     const post = snapshotVal[slug];
     result.push(post);
   }

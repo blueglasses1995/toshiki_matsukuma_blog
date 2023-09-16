@@ -13,11 +13,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@tiptap/pm": "^2.1.10",
+    "@tiptap/react": "^2.1.10",
+    "@tiptap/starter-kit": "^2.1.10",
     "firebase": "^10.4.0",
+    "framer-motion": "^10.16.4",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.67.0"
+    "react-hook-form": "^7.46.1",
+    "sass": "^1.67.0",
+    "zod": "^3.22.2",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.6.2",
