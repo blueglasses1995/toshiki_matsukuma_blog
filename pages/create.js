@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useRouter } from 'next/router'; // this is new
 import { createPost } from '@lib/firebase'; // this is new
 import styles from '@styles/create.module.scss';
+import { Layout } from '@components';
 
 const CreatePage = () => {
-  const router = useRouter(); // this is new
+  const router = useRouter();
   const [formValues, setFormValues] = useState({
     title: '',
     slug: '',
@@ -12,7 +13,7 @@ const CreatePage = () => {
     coverImageAlt: '',
     content: '',
   });
-  const [isLoading, setIsLoading] = useState(false); // this is new
+  const [isLoading, setIsLoading] = useState(false);
 
   /*
   This is the function we're passing to each control so we can capture
@@ -70,6 +71,7 @@ const CreatePage = () => {
   };
 
   return (
+    <Layout>
     <div className={styles.CreatePage}>
       <form onSubmit={handleSubmit}>
         <h1>Create a new post</h1>
@@ -122,6 +124,7 @@ const CreatePage = () => {
         </button>
       </form>
     </div>
+    </Layout>
   );
 };
 

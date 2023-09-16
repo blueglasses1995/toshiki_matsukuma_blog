@@ -1,5 +1,6 @@
 import { getFormattedDate } from '@lib/utils';
 import { getPosts } from '@lib/firebase';
+import { Layout } from '@components';
   
 // This component represents the index page for the site. You
 // can read more about Pages in the Next.js docs at:
@@ -8,6 +9,7 @@ import { getPosts } from '@lib/firebase';
 import styles from '@styles/index.module.scss';
 
 const HomePage = ({ posts }) => (
+  <Layout>
     <div className={styles.HomePage}>
       <h1>Blog Posts</h1>
       {posts?.map((post) => (
@@ -25,6 +27,7 @@ const HomePage = ({ posts }) => (
         </article>
       ))}
     </div>
+    </Layout>
   );  
 
 // This is for fetching data every time the page is visited. We do this
