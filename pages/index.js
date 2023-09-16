@@ -28,9 +28,10 @@ const HomePage = ({ posts }) => (
             <span>{getFormattedDate(post.dateCreated)}</span>
             <p
               dangerouslySetInnerHTML={{
-                __html: `${post.content.substring(0, 200)}...`,
+                __html: `${post.content.substring(0, 70)}...`,
               }}
-            ></p>
+            />
+            <a href={`/post/${post.slug}`}>Continue Reading</a>
           </div>
         </article>
       ))}
