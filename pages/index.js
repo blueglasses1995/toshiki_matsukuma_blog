@@ -1,16 +1,5 @@
+import { getFormattedDate } from '@lib/utils';
 import { getPosts } from '@lib/firebase';
-
-const getFormattedDate = (milliseconds) => {
-    const formatOptions = {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
-      timeZone: 'UTC',
-    };
-    const date = new Date(milliseconds);
-    return date.toLocaleDateString(undefined, formatOptions);
-  };
   
 // This component represents the index page for the site. You
 // can read more about Pages in the Next.js docs at:
