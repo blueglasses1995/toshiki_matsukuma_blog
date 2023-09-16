@@ -1,15 +1,19 @@
 import { getFormattedDate } from '@lib/utils';
 import { getPostBySlug } from '@lib/firebase';
 import styles from '@styles/post.module.scss';
+import { Layout } from '@components';
 
 const PostPage = ({ post }) => (
-  <div className={styles.PostPage}>
-    <img src={post.coverImage} alt={post.coverImageAlt} />
-    <h1>{post.title}</h1>
-    <span>Published {getFormattedDate(post.dateCreated)}</span>
-    <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
-  </div>
+  <Layout>
+    <div className={styles.PostPage}>
+      <img src={post.coverImage} alt={post.coverImageAlt} />
+      <h1>{post.title}</h1>
+      <span>Published {getFormattedDate(post.dateCreated)}</span>
+      <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
+    </div>
+  </Layout>
 );
+
 
 
 export async function getServerSideProps(context) {
