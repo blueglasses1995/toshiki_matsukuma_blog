@@ -34,8 +34,9 @@ export const getPosts = async () => {
     .then(snapshot => {
       return reshape(snapshot);
     })
-    .catch(error => {
-      throw error;
+    .catch((error: unknown) => {
+      if (error instanceof Error) throw error;
+      console.error(error);
     });
 
   return posts;
