@@ -2,10 +2,10 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
-      "@components": ["components"],
-      "@contexts/*": ["contexts/*"],
-      "@lib/*": ["lib/*"],
-      "@styles/*": ["styles/*"]
+      "@components": ["./components"],
+      "@contexts/*": ["./contexts/*"],
+      "@lib/*": ["./lib/*"],
+      "@styles/*": ["./styles/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,
