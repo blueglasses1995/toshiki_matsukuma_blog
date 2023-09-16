@@ -2,8 +2,21 @@ import { getFormattedDate } from '@lib/utils';
 import { getPostBySlug } from '@lib/firebase';
 import styles from '@styles/post.module.scss';
 import { Layout } from '@components';
+import { useRouter } from 'next/router';
 
-const PostPage = ({ post }) => (
+const PostPage = ({ post }) => {
+  const router = useRouter();
+
+  if (!post && typeof window !== 'undefined') {
+    router.push('/404');
+    return;
+  }
+
+  if (!post) {
+    return null;
+  }
+
+  return(
   <Layout>
     <div className={styles.PostPage}>
       <img src={post.coverImage} alt={post.coverImageAlt} />
@@ -11,8 +24,9 @@ const PostPage = ({ post }) => (
       <span>Published {getFormattedDate(post.dateCreated)}</span>
       <p dangerouslySetInnerHTML={{ __html: post.content }}></p>
     </div>
-  </Layout>
-);
+  </Layout>)
+}
+;
 
 
 
