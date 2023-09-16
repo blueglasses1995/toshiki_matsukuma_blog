@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router'; // this is new
 import { createPost } from '@lib/firebase'; // this is new
-import styles from '@styles/create.module.scss';
 import { Layout } from '@components';
 
 const CreatePage = () => {
@@ -72,7 +71,7 @@ const CreatePage = () => {
 
   return (
     <Layout>
-      <div className={styles.CreatePage}>
+      <div>
         <form onSubmit={handleSubmit}>
           <h1>Create a new post</h1>
           <div>

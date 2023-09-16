@@ -1,7 +1,5 @@
-import styles from '@styles/Layout.module.scss';
-
 const Layout = ({ children }) => (
-  <div className={styles.Layout}>
+  <div>
     <nav>
       <span>
         <a href="/">My Next.js Blog</a>

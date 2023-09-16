@@ -1,6 +1,5 @@
 import { getFormattedDate } from '@lib/utils';
 import { getPostBySlug } from '@lib/firebase';
-import styles from '@styles/post.module.scss';
 import { Layout } from '@components';
 import { useRouter } from 'next/router';
 
@@ -18,7 +17,7 @@ const PostPage = ({ post }) => {
 
   return (
     <Layout>
-      <div className={styles.PostPage}>
+      <div>
         <img src={post.coverImage} alt={post.coverImageAlt} />
         <h1>{post.title}</h1>
         <span>Published {getFormattedDate(post.dateCreated)}</span>

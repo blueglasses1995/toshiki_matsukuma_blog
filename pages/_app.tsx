@@ -3,8 +3,6 @@
 // icon library. You can read more about this in the Next.js docs at:
 // https://nextjs.org/docs/advanced-features/custom-app
 
-import '@styles/global.scss';
-
 const App = ({ Component, pageProps }) => <Component {...pageProps} />;
 
 export default App;

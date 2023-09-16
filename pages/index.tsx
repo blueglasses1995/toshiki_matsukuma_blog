@@ -6,11 +6,9 @@ import { Layout } from '@components';
 // can read more about Pages in the Next.js docs at:
 // https://nextjs.org/docs/basic-features/pages
 
-import styles from '@styles/index.module.scss';
-
 const HomePage = ({ posts }) => (
   <Layout>
-    <div className={styles.HomePage}>
+    <div>
       <h1>Blog Posts</h1>
       {posts?.map(post => (
         <article key={post.slug}>
